@@ -1,0 +1,29 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.societe.generale.parent</groupId>
+    <artifactId>assignment-parent</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>com.societe.generale</groupId>
+  <artifactId>assignment-core</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+  
+  <name>assignment-core</name>
+  <url>http://maven.apache.org</url>
+  
+  <dependencies>
+    <dependency>
+    	<groupId>com.societe.generale</groupId>
+      	<artifactId>assignment-dao</artifactId>
+      	<version>${assignment-dao.version}</version>
+    </dependency>
+  </dependencies>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <assignment-dao.version>1.0</assignment-dao.version>
+  </properties>
+</project>

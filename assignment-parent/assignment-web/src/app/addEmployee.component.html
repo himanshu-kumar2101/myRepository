@@ -1,0 +1,41 @@
+<div>
+    <div>
+        <form>
+            <input type = "hidden" [(ngModel)] = "employee.employeeId" name = "employeeId" /> 
+            <div>
+                <label>First Name</label>
+                <div>
+                    <input type = "text" [(ngModel)] = "employee.firstName" name = "firstName"/>
+                </div>    
+            </div>
+            <div>
+                <label>Last Name</label>
+                <div>
+                    <input type = "text" [(ngModel)] = "employee.lastName" name = "lastName"/>
+                </div>    
+            </div>
+            <div>
+                <label>Gender</label>
+                <div>
+                    <input type = "text" [(ngModel)] = "employee.gender" name = "gender"/>
+                </div>    
+            </div>
+            <div>
+                <label>Date of Birth</label>
+                <div>
+                    <input type = "text" [(ngModel)] = "employee.dateOfBirth" name = "dateOfBirth"/>
+                </div>    
+            </div>
+            <div>
+                <label>Department</label>
+                <div>
+                    <input type = "text" [(ngModel)] = "employee.departmentName" name = "departmentName"/>
+                </div>    
+            </div>
+            <div>
+                <div>
+                    <button (click) = "addEmployee()">Add Employee</button>
+                </div>
+            </div>
+        </form>
+    </div>
