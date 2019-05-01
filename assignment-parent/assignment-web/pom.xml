@@ -31,8 +31,9 @@
     </dependency>
     <dependency>
 		<groupId>javax.servlet</groupId>
-		<artifactId>servlet-api</artifactId>
+		<artifactId>javax.servlet-api</artifactId>
 		<version>${javax.servlet.version}</version>
+		<!-- <scope>provided</scope> -->
 		</dependency>
   </dependencies>
   
@@ -41,7 +42,7 @@
     <spring-webmvc.version>4.3.0.RELEASE</spring-webmvc.version>
     <assignment-core.version>1.0</assignment-core.version>
     <json.version>2.5.3</json.version>
-    <javax.servlet.version>2.5</javax.servlet.version>
+    <javax.servlet.version>3.0.1</javax.servlet.version>
   </properties>
   
   <build>
@@ -49,7 +50,7 @@
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
         	<artifactId>maven-compiler-plugin</artifactId>
-        	<version>2.5.1</version>
+        	<version>3.8.0</version>
         		<configuration>
                     <source>1.8</source>
                     <target>1.8</target>

@@ -17,7 +17,7 @@ public class DepartmentController {
 	@Autowired
 	private DepartmentService departmentService;
 	
-	@RequestMapping(value = "/getDepartments", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+	@RequestMapping(value = "/viewDepartments", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
 	public List<DepartmentVO> getDepartments(){
 		List<DepartmentVO> departments = departmentService.getAllDepartments();
 		return departments;

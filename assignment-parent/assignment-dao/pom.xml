@@ -30,6 +30,16 @@
       	<artifactId>javax.persistence-api</artifactId>
       	<version>${javax.persistence.version}</version>
     </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring-orm.version}</version>
+    </dependency>
+    <dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>${commons-dbcp.version}</version>
+	</dependency>
   </dependencies>
   
   <properties>
@@ -38,5 +48,7 @@
     <hibernate-core.version>4.3.6.Final</hibernate-core.version>
     <junit.version>3.8.1</junit.version>
     <javax.persistence.version>2.2</javax.persistence.version>
+    <spring-orm.version>4.3.0.RELEASE</spring-orm.version>
+    <commons-dbcp.version>1.4</commons-dbcp.version>
   </properties>
 </project>

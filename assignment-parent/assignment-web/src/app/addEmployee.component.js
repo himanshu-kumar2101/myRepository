@@ -12,12 +12,24 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var employee_service_1 = require("./employee.service");
 var employee_1 = require("./employee");
+var department_service_1 = require("./department.service");
+var http_1 = require("@angular/http");
 var AddEmployeeComponent = (function () {
-    function AddEmployeeComponent(employeeService, router) {
+    function AddEmployeeComponent(employeeService, router, _httpService) {
         this.employeeService = employeeService;
         this.router = router;
+        this._httpService = _httpService;
         this.employee = new employee_1.Employee();
+        this.departMentService = new department_service_1.DepartmentService(this._httpService);
     }
+    AddEmployeeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log("calling ngOnInit()::::");
+        this.departMentService.viewDepartments().subscribe(function (departmentsData) { return _this.departments = departmentsData; }, function (error) {
+            console.log(error);
+            _this.statusMessage = "Problem with service. Please try again later!";
+        });
+    };
     AddEmployeeComponent.prototype.addEmployee = function () {
         var _this = this;
         this.employeeService.addEmployee(this.employee)
@@ -34,7 +46,7 @@ AddEmployeeComponent = __decorate([
         templateUrl: './addEmployee.component.html',
     }),
     __metadata("design:paramtypes", [employee_service_1.EmployeeService,
-        router_1.Router])
+        router_1.Router, http_1.Http])
 ], AddEmployeeComponent);
 exports.AddEmployeeComponent = AddEmployeeComponent;
 //# sourceMappingURL=addEmployee.component.js.map

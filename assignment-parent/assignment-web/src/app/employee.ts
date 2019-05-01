@@ -4,7 +4,7 @@ export class Employee  {
 	lastName: string;
 	gender: string;
 	dateOfBirth: string;
-  department: string;
+  departmentName: string;
   constructor(){
 
   }

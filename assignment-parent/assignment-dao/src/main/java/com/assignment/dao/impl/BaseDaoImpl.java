@@ -10,10 +10,13 @@ import com.assignment.dao.BaseDao;
 @Repository
 public class BaseDaoImpl implements BaseDao{
 
-	@Autowired 
+	//@Autowired 
 	private SessionFactory sessionFactory;
 
 	public Session getSession() {
+		if(sessionFactory != null){
 		return sessionFactory.openSession();
+		}
+		return null;
 	}
 }
